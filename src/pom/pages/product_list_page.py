@@ -9,7 +9,7 @@ class ProductList(BasePage):
         self.driver = driver
         super(ProductList, self).__init__(driver)
 
-    firstItem = (AppiumBy.ID, Locators.firstItemView)
+    firstItems = (AppiumBy.ID, Locators.firstItemView)
 
-    def FirstItem(self):
-        self.click(self.firstItem)
+    def firstItem(self):
+        self.click(self.firstItems)

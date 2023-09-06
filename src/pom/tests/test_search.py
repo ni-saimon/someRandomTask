@@ -4,7 +4,6 @@ from src.pom.utility.coftest import GetDriver
 from src.pom.pages.disclaimer_page import Disclaimer
 from src.pom.pages.navigation_drawer_page import NavigationDrawer
 from src.pom.pages.category_page import Category
-from src.pom.pages.product_list_page import ProductList
 
 
 class TestCatElectronics(unittest.TestCase):
@@ -21,5 +20,3 @@ class TestCatElectronics(unittest.TestCase):
         elec.electronics()
         nav.search()
         nav.searchItem("Mattress Bedroom")
-        product = ProductList(self.driver)
-        product.FirstItem()
