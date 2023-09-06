@@ -19,5 +19,8 @@ class BasePage:
     def wait_for_clickable(self, by_locator):
         self.wait.until(EC.element_to_be_clickable(by_locator))
 
-    def swipe(self):
+    def swipeLeft(self):
+        self.driver.swipe(550, 950, 50, 950, 400)
+
+    def swipeDown(self):
         self.driver.swipe(0, 800, 0, 0, 1000)

@@ -18,7 +18,7 @@ class ProductDetails(BasePage):
         self.wait_for_clickable(self.wishlistBtn)
 
     def increaseQuantityByOne(self):
-        self.swipe()
+        self.swipeDown()
         self.click(self.plusBtn)
 
     def addToCart(self):

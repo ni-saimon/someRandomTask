@@ -6,12 +6,12 @@ class Address:
     countryName = "//*[@text='United States of America']"
     state = "com.nopstation.nopcommerce.nopstationcart:id/stateSpinnerLayout"
     stateName = "//*[@text='Alaska']"
-    Company = "com.nopstation.nopcommerce.nopstationcart:id/etCompanyName"
-    City = "com.nopstation.nopcommerce.nopstationcart:id/etCity"
-    Street = "com.nopstation.nopcommerce.nopstationcart:id/etStreetAddress"
-    ZipCode = "com.nopstation.nopcommerce.nopstationcart:id/etZipCode"
-    Phone = "com.nopstation.nopcommerce.nopstationcart:id/etPhone"
-    Fax = "com.nopstation.nopcommerce.nopstationcart:id/etFax"
+    company = "com.nopstation.nopcommerce.nopstationcart:id/etCompanyName"
+    city = "com.nopstation.nopcommerce.nopstationcart:id/etCity"
+    street1 = "com.nopstation.nopcommerce.nopstationcart:id/etStreetAddress"
+    zipCode = "com.nopstation.nopcommerce.nopstationcart:id/etZipCode"
+    phone = "com.nopstation.nopcommerce.nopstationcart:id/etPhone"
+    fax = "com.nopstation.nopcommerce.nopstationcart:id/etFax"
     btnContinue = "com.nopstation.nopcommerce.nopstationcart:id/btnContinue"
 
 

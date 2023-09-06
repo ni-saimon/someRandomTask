@@ -2,7 +2,7 @@ import allure
 import unittest
 from src.pom.utility.coftest import GetDriver
 from src.pom.pages.disclaimer_page import Disclaimer
-from src.pom.pages.navigation_drawer_page import NavigationDrawer
+from src.pom.pages.homepage_page import NavigationDrawer
 from src.pom.pages.category_page import Category
 
 
