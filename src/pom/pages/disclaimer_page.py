@@ -1,9 +1,6 @@
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from src.pom.pages.base_page import BasePage
-
-acceptButton = (AppiumBy.ID, "btnAccept")
+from src.pom.locators.disclaimer_page import Locators
 
 
 class Disclaimer(BasePage):
@@ -12,5 +9,7 @@ class Disclaimer(BasePage):
         self.driver = driver
         super(Disclaimer, self).__init__(driver)
 
+    acceptButton = (AppiumBy.ID, Locators.accept)
+
     def acceptDisclaimer(self):
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((AppiumBy.ID, "btnAccept"))).click()
+        self.click(self.acceptButton)

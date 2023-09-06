@@ -3,7 +3,9 @@ import unittest
 from appium import webdriver
 
 
-class GetDriver(unittest.TestCase):
+class GetDriver(object):
+
+    driver = None
 
     @allure.step("nopstationCart")
     def setUp(self):
@@ -17,9 +19,7 @@ class GetDriver(unittest.TestCase):
         )
         url = 'http://localhost:4723/wd/hub'
         self.driver = webdriver.Remote(url, capabilities)
-
-    def tearDown(self):
-        print("Test Completed")
+        return self.driver
 
 
 if __name__ == "__main__":
