@@ -11,9 +11,14 @@ class NavigationDrawer(BasePage):
 
     categoryButton = (AppiumBy.ID, Locators.category)
     searchButton = (AppiumBy.ID, Locators.search)
+    srcTxt = (AppiumBy.ID, Locators.src_text)
 
     def category(self):
         self.click(self.categoryButton)
 
     def search(self):
         self.click(self.searchButton)
+
+    def searchItem(self, key):
+        self.send_keys(self.srcTxt, key)
+        self.driver.press_keycode(66)
