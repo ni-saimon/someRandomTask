@@ -9,9 +9,10 @@ from src.pom.pages.address_page import FillUpAddress
 from src.pom.pages.deliverytype_page import ShipmentType
 from src.pom.pages.payment_page import PaymentType
 from src.pom.pages.orderconfirmation_page import OrderFinalize
+from Data.data import Information
 
 
-class TestCheckoutAsGuest:
+class TestOrderAsGuest:
 
     driver = GetDriver().setUp()
 
@@ -22,7 +23,7 @@ class TestCheckoutAsGuest:
         nav = HomePage(self.driver)
         nav.ourCategories()
         nav.search()
-        nav.searchItem("Mattress Bedroom")
+        nav.searchItem(Information.keyword)
         product = ProductList(self.driver)
         product.firstItem()
         cart = ProductDetails(self.driver)
@@ -40,4 +41,5 @@ class TestCheckoutAsGuest:
         pay = PaymentType(self.driver)
         pay.checkMoneyOrderPayment()
         placeOrder = OrderFinalize(self.driver)
-        placeOrder.orderSuccessful()
+        message = placeOrder.orderSuccessful()
+        assert Information.successMessage in message

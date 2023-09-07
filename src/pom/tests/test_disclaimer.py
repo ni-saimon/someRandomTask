@@ -8,7 +8,7 @@ class TestDisclaimer:
 
     driver = GetDriver().setUp()
 
-    @allure.testcase("Accept Disclaimer")
+    @allure.step("Accept Disclaimer")
     def test_disclaimer(self):
         disc = Disclaimer(self.driver)
         disc.acceptDisclaimer()

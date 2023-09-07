@@ -1,2 +1,2 @@
-FirstName,LastName,Email,Company,City,Street1,PostCode,Mobile,Fax
-Nafiz,Imtiaz,n@email.com,RandomCompany,RandomCity,RandomStreet,1212,1234567890,000-111-222
+FirstName,LastName,Email,Company,City,Street1,PostCode,Mobile,Fax,Category,Homepage,Keyword,Quantity,Delivery,Payment,Message
+Nafiz,Imtiaz,n@email.com,RandomCompany,RandomCity,RandomStreet,1212,1234567890,000-111-222,electronics,OUR CATEGORIES,Mattress Bedroom,2,Next Day Air,Check/Money Order,Your order has been successfully processed!

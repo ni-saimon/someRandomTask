@@ -1,7 +1,7 @@
 import csv
 
 
-class GuestInformation:
+class Information:
     with open("G:\\information.csv", encoding='utf-8-sig') as f_input:
         csv_input = csv.DictReader(f_input)
 
@@ -15,14 +15,10 @@ class GuestInformation:
             zip = row['PostCode']
             phone = row['Mobile']
             fax = row['Fax']
-    """
-    firstName = "Nafiz"
-    lastName = "Imtiaz"
-    email = "n@email.com"
-    company = "RandomCompany"
-    city = "RandomCity"
-    street1 = "RandomStreet"
-    zip = "1212"
-    phone = "01234567890"
-    fax = "000-111-222"
-    """
+            category = row['Category']
+            homepage = row['Homepage']
+            keyword = row['Keyword']
+            quantity = row['Quantity']
+            delivery = row['Delivery']
+            payment = row['Payment']
+            successMessage = row['Message']

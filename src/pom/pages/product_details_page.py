@@ -1,6 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from src.pom.pages.base_page import BasePage
 from src.pom.locators.product_details_page import Locators
+from Data.data import Information
 
 
 class ProductDetails(BasePage):
@@ -13,13 +14,15 @@ class ProductDetails(BasePage):
     addToCartBtn = (AppiumBy.ID, Locators.btnAddToCart)
     wishlistBtn = (AppiumBy.ID, Locators.fabAddToWishlist)
     cartBtn = (AppiumBy.ID, Locators.counterIcon)
+    quantity = int(Information.quantity)
 
     def checkWishlistButtonAvailable(self):
         self.wait_for_clickable(self.wishlistBtn)
 
     def increaseQuantityByOne(self):
         self.swipeDown()
-        self.click(self.plusBtn)
+        for i in range(1, self.quantity):
+            self.click(self.plusBtn)
 
     def addToCart(self):
         self.click(self.addToCartBtn)

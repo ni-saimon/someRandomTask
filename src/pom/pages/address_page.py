@@ -1,7 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from src.pom.pages.base_page import BasePage
 from src.pom.locators.checkout_page import Address
-from Data.guestcutomerinfo import GuestInformation
+from Data.data import Information
 
 
 class FillUpAddress(BasePage):
@@ -26,18 +26,18 @@ class FillUpAddress(BasePage):
     continueBtn = (AppiumBy.ID, Address.btnContinue)
 
     def customerInformation(self):
-        self.send_keys(self.FirstName, GuestInformation.firstName)
-        self.send_keys(self.LastName, GuestInformation.lastName)
-        self.send_keys(self.Email, GuestInformation.email)
+        self.send_keys(self.FirstName, Information.firstName)
+        self.send_keys(self.LastName, Information.lastName)
+        self.send_keys(self.Email, Information.email)
         self.click(self.CountryDropDown)
         self.click(self.CountryName)
         self.click(self.StateDropDown)
         self.click(self.StateName)
-        self.send_keys(self.Company, GuestInformation.company)
+        self.send_keys(self.Company, Information.company)
         self.swipeDown()
-        self.send_keys(self.City, GuestInformation.city)
-        self.send_keys(self.Street1, GuestInformation.street1)
-        self.send_keys(self.ZipCode, GuestInformation.zip)
-        self.send_keys(self.Phone, GuestInformation.phone)
-        self.send_keys(self.Fax, GuestInformation.fax)
+        self.send_keys(self.City, Information.city)
+        self.send_keys(self.Street1, Information.street1)
+        self.send_keys(self.ZipCode, Information.zip)
+        self.send_keys(self.Phone, Information.phone)
+        self.send_keys(self.Fax, Information.fax)
         self.click(self.continueBtn)

@@ -8,7 +8,7 @@ class TestHomePage:
 
     driver = GetDriver().setUp()
 
-    @allure.step("Navigate to Our Categories")
+    @allure.step("Navigation from Home Page")
     def test_homepage(self):
         disc = Disclaimer(self.driver)
         disc.acceptDisclaimer()

@@ -5,6 +5,7 @@ from src.pom.pages.homepage_page import HomePage
 from src.pom.pages.product_list_page import ProductList
 from src.pom.pages.product_details_page import ProductDetails
 from src.pom.pages.cart_page import Checkout
+from Data.data import Information
 
 
 class TestCheckoutAsGuest:
@@ -18,7 +19,7 @@ class TestCheckoutAsGuest:
         nav = HomePage(self.driver)
         nav.ourCategories()
         nav.search()
-        nav.searchItem("Mattress Bedroom")
+        nav.searchItem(Information.keyword)
         product = ProductList(self.driver)
         product.firstItem()
         cart = ProductDetails(self.driver)

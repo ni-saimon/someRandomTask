@@ -3,3 +3,4 @@ class Locators:
     btnPlus = "com.nopstation.nopcommerce.nopstationcart:id/btnPlus"
     btnAddToCart = "com.nopstation.nopcommerce.nopstationcart:id/btnAddToCart"
     counterIcon = "com.nopstation.nopcommerce.nopstationcart:id/counterIcon"
+    quantity = "com.nopstation.nopcommerce.nopstationcart:id/tvQuantity"
