@@ -10,7 +10,7 @@ class TestSearch(unittest.TestCase):
     driver = GetDriver().setUp()
 
     @allure.step("Search Mattress Bedroom from Electronics Category")
-    def test_navigation_drawer(self):
+    def test_search(self):
         disc = Disclaimer(self.driver)
         disc.acceptDisclaimer()
         nav = HomePage(self.driver)

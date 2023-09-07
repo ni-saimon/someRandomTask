@@ -17,4 +17,3 @@ class OrderFinalize(BasePage):
         self.click(self.continueBtn)
         successMessage = self.get_text(self.message)
         assert "Your order has been successfully processed!" in successMessage
-

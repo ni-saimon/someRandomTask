@@ -2,17 +2,16 @@ import allure
 import unittest
 from src.pom.utility.coftest import GetDriver
 from src.pom.pages.disclaimer_page import Disclaimer
-from src.pom.pages.homepage_page import NavigationDrawer
+from src.pom.pages.homepage_page import HomePage
 
 
 class TestHomePage(unittest.TestCase):
 
     driver = GetDriver().setUp()
 
-    @allure.step("Navigate to Category")
-    def test_navigation_drawer(self):
+    @allure.step("Navigate to Our Categories")
+    def test_homepage(self):
         disc = Disclaimer(self.driver)
         disc.acceptDisclaimer()
-        nav = NavigationDrawer(self.driver)
-        nav.category()
-
+        nav = HomePage(self.driver)
+        nav.ourCategories()

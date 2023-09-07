@@ -16,8 +16,8 @@ class CheckoutAsGuest(unittest.TestCase):
 
     driver = GetDriver().setUp()
 
-    @allure.step("Search Mattress Bedroom from Electronics Category")
-    def test_navigation_drawer(self):
+    @allure.step("Complete an Order")
+    def test_order(self):
         disc = Disclaimer(self.driver)
         disc.acceptDisclaimer()
         nav = HomePage(self.driver)
