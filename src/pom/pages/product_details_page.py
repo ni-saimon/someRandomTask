@@ -14,6 +14,7 @@ class ProductDetails(BasePage):
     addToCartBtn = (AppiumBy.ID, Locators.btnAddToCart)
     wishlistBtn = (AppiumBy.ID, Locators.fabAddToWishlist)
     cartBtn = (AppiumBy.ID, Locators.counterIcon)
+    updatedQuantity = (AppiumBy.ID, Locators.quantity)
     quantity = int(Information.quantity)
 
     def checkWishlistButtonAvailable(self):
@@ -29,3 +30,6 @@ class ProductDetails(BasePage):
 
     def navigateToCart(self):
         self.click(self.cartBtn)
+
+    def currentQuantity(self):
+        return self.get_text(self.updatedQuantity)

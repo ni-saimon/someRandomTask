@@ -10,6 +10,10 @@ class ProductList(BasePage):
         super(ProductList, self).__init__(driver)
 
     firstItems = (AppiumBy.ID, Locators.firstItemView)
+    firstProductName = (AppiumBy.ID, Locators.productName)
 
     def firstItem(self):
         self.click(self.firstItems)
+
+    def returnFirstItemName(self):
+        return self.get_text(self.firstProductName)

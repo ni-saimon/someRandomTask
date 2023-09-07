@@ -4,7 +4,6 @@ from src.pom.pages.disclaimer_page import Disclaimer
 from src.pom.pages.homepage_page import HomePage
 from src.pom.pages.product_list_page import ProductList
 from src.pom.pages.product_details_page import ProductDetails
-from src.pom.locators.product_details_page import Locators
 from Data.data import Information
 
 
@@ -26,5 +25,5 @@ class TestAddToCart:
         cart.checkWishlistButtonAvailable()
         cart.increaseQuantityByOne()
         cart.addToCart()
-        assert Information.quantity == Locators.quantity
+        assert Information.quantity == cart.currentQuantity()
         cart.navigateToCart()
