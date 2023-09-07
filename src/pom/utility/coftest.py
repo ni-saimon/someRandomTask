@@ -1,5 +1,4 @@
 import allure
-import unittest
 from appium import webdriver
 
 
@@ -20,7 +19,3 @@ class GetDriver(object):
         url = 'http://localhost:4723/wd/hub'
         self.driver = webdriver.Remote(url, capabilities)
         return self.driver
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -1,11 +1,10 @@
 import allure
-import unittest
 from src.pom.utility.coftest import GetDriver
 from src.pom.pages.disclaimer_page import Disclaimer
 from src.pom.pages.homepage_page import HomePage
 
 
-class TestHomePage(unittest.TestCase):
+class TestHomePage:
 
     driver = GetDriver().setUp()
 

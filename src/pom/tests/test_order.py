@@ -1,5 +1,4 @@
 import allure
-import unittest
 from src.pom.utility.coftest import GetDriver
 from src.pom.pages.disclaimer_page import Disclaimer
 from src.pom.pages.homepage_page import HomePage
@@ -12,7 +11,7 @@ from src.pom.pages.payment_page import PaymentType
 from src.pom.pages.orderconfirmation_page import OrderFinalize
 
 
-class CheckoutAsGuest(unittest.TestCase):
+class TestCheckoutAsGuest:
 
     driver = GetDriver().setUp()
 

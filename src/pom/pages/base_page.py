@@ -29,4 +29,4 @@ class BasePage:
         self.driver.swipe(0, 500, 0, 0, 500)
 
     def swipeDownLong(self):
-        self.driver.swipe(500, 2000, 500, 1600, 75)
+        self.driver.swipe(500, 2000, 500, 1600, 70)
