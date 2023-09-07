@@ -25,7 +25,7 @@ class FillUpAddress(BasePage):
     Fax = (AppiumBy.ID, Address.fax)
     continueBtn = (AppiumBy.ID, Address.btnContinue)
 
-    def information(self):
+    def customerInformation(self):
         self.send_keys(self.FirstName, GuestInformation.firstName)
         self.send_keys(self.LastName, GuestInformation.lastName)
         self.send_keys(self.Email, GuestInformation.email)
@@ -41,4 +41,3 @@ class FillUpAddress(BasePage):
         self.send_keys(self.Phone, GuestInformation.phone)
         self.send_keys(self.Fax, GuestInformation.fax)
         self.click(self.continueBtn)
-

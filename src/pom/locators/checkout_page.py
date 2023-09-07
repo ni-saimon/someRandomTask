@@ -22,7 +22,7 @@ class Shipping:
 class Payment:
     Nagad = "//*[@text='Nagad']"
     CheckMoney = "//*[@text='Check / Money Order']"
-    CheckMoneyConfirm = "//*[@text='Next']"
+    confirmButton = "//*[@text='Next']"
 
 
 class OrderConfirm:

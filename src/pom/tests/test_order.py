@@ -7,6 +7,9 @@ from src.pom.pages.product_list_page import ProductList
 from src.pom.pages.product_details_page import ProductDetails
 from src.pom.pages.cart_page import Checkout
 from src.pom.pages.address_page import FillUpAddress
+from src.pom.pages.deliverytype_page import ShipmentType
+from src.pom.pages.payment_page import PaymentType
+from src.pom.pages.orderconfirmation_page import OrderFinalize
 
 
 class CheckoutAsGuest(unittest.TestCase):
@@ -32,4 +35,10 @@ class CheckoutAsGuest(unittest.TestCase):
         checkout.checkout()
         checkout.guestCheckout()
         order = FillUpAddress(self.driver)
-        order.information()
+        order.customerInformation()
+        shipping = ShipmentType(self.driver)
+        shipping.shippingNextDayAir()
+        pay = PaymentType(self.driver)
+        pay.checkMoneyOrderPayment()
+        placeOrder = OrderFinalize(self.driver)
+        placeOrder.orderSuccessful()
