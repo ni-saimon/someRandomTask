@@ -14,8 +14,8 @@ order placement as a guest using appium python
 
 Order test video:
 
-https://github.com/ni-saimon/someRandomTask/assets/40791066/7fbf5cc3-39da-4638-be30-0e125bddb333
 
+https://github.com/ni-saimon/someRandomTask/assets/40791066/0b4273bc-224b-4bbc-9abb-796d4a5b309e
 
 
 allure commandlines:
